@@ -6,7 +6,7 @@ import imutils
 #Genera la carpeta de la emocion
 
 emotionName = 'Enojo'
-dataPath = r"C:\Users\USUARIO\Desktop\Imagenes\Proyecto\Data"
+dataPath = r"D:/Uni/Septimo Semestre/Procesamiento de imagenes/Proyecto/Data"
 #Cambiar la dirección por la que tienen en su equipo, si no tienen la carpeta Data, por favor creenla
 emotionPath = dataPath + '/' + emotionName
 
@@ -16,8 +16,8 @@ if not os.path.exists(emotionPath):
 
 #Permite acceder a la camara web
 
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-faceClassif = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+cap = cv2.VideoCapture(1,cv2.CAP_DSHOW)
+faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 count = 0
 
 while True:
